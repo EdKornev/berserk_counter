@@ -2,15 +2,16 @@ package com.edkornev.berserkcounter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.edkornev.berserkcounter.dialogs.SelectRaceDialog;
 import com.edkornev.berserkcounter.utils.RaceEnum;
 
 public class CounterActivity extends AppCompatActivity {
@@ -45,7 +46,9 @@ public class CounterActivity extends AppCompatActivity {
         RaceEnum topRace = RaceEnum.valueOf(settings.getString(this.getString(R.string.key_settings_top_race), RaceEnum.FIELDS.toString()));
         RaceEnum bottomRace = RaceEnum.valueOf(settings.getString(this.getString(R.string.key_settings_bottom_race), RaceEnum.ROCKS.toString()));
         mIVTopRace.setImageDrawable(ContextCompat.getDrawable(this, topRace.getImage()));
+        mIVTopRace.setOnClickListener(clickBtnRaceSelect);
         mIVBottomRace.setImageDrawable(ContextCompat.getDrawable(this, bottomRace.getImage()));
+        mIVBottomRace.setOnClickListener(clickBtnRaceSelect);
 
         mTVTopAdd.setOnClickListener(clickBtnTopAdd);
         mTVTopSub.setOnClickListener(clickBtnTopSub);
@@ -83,6 +86,14 @@ public class CounterActivity extends AppCompatActivity {
         public void onClick(View v) {
             Integer currentValue = Integer.valueOf(mTVBottomCounter.getText().toString());
             mTVBottomCounter.setText(String.valueOf(--currentValue));
+        }
+    };
+
+    private View.OnClickListener clickBtnRaceSelect = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            SelectRaceDialog dialog = new SelectRaceDialog(CounterActivity.this, (ImageView) view);
+            dialog.show();
         }
     };
 }
