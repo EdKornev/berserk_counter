@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BerserkCounter</string>
+
+    <string name="key_settings" translatable="false">app_settings</string>
+    <string name="key_settings_top_race" translatable="false">settings_top_race</string>
+    <string name="key_settings_bottom_race" translatable="false">settings_bottom_race</string>
+</resources>

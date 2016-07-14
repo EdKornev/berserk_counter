@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.edkornev.berserkcounter.CounterActivity">
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="#d70f1c">
+
+        <TextView
+            android:id="@+id/tv_top_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:rotation="180"
+            android:text="26"
+            android:textSize="54sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_top_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_top_counter"
+            android:layout_toStartOf="@id/tv_top_counter"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="16dp"
+            android:text="+"
+            android:textSize="42sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_top_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_top_counter"
+            android:layout_toEndOf="@id/tv_top_counter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:text="-"
+            android:textSize="42sp"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/iv_top_race"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp"
+            android:rotation="180"
+            android:src="@drawable/fields"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="#1448c2">
+
+        <TextView
+            android:id="@+id/tv_bottom_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="26"
+            android:textSize="54sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_bottom_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_bottom_counter"
+            android:layout_toEndOf="@id/tv_bottom_counter"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:text="+"
+            android:textSize="42sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_bottom_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_bottom_counter"
+            android:layout_toStartOf="@id/tv_bottom_counter"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="16dp"
+            android:text="-"
+            android:textSize="42sp"
+            android:textColor="#ffffff"/>
+
+        <ImageView
+            android:id="@+id/iv_bottom_race"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:padding="16dp"
+            android:src="@drawable/rocks"/>
+
+    </RelativeLayout>
+</LinearLayout>
